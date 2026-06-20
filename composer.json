@@ -1,0 +1,52 @@
+{
+    "name": "andydefer/laravel-totp",
+    "description": "Laravel TOTP package for two-factor authentication with polymorphic support, recovery codes and QR Code generation.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AndyDefer\\LaravelTotp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AndyDefer\\LaravelTotp\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andy Kani",
+            "email": "andykanidimbu@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0|^13.0|^14.0|^15.0",
+        "andydefer/laravel-repository": "^2.8.6",
+        "endroid/qr-code": "^5.0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.6",
+        "composer/composer": "^2.0",
+        "larastan/larastan": "^3.8",
+        "laravel/pint": "^1.26",
+        "orchestra/testbench": "^10.8",
+        "phpunit/phpunit": "^12.5",
+        "rector/rector": "*",
+        "symfony/var-dumper": "^7.0",
+        "vimeo/psalm": "^6.14"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AndyDefer\\LaravelTotp\\TotpServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test-unit": "phpunit --testsuite=unit",
+        "test-integration": "phpunit --testsuite=integration"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
